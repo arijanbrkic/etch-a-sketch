@@ -1,5 +1,5 @@
 # etch-a-sketch
-Etch-a-sketch project for The Odin Project](https://www.theodinproject.com/)
+Etch-a-sketch project for [The Odin Project](https://www.theodinproject.com/)
 TheOdinProject
 
 ## Overview
