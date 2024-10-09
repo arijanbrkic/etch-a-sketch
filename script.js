@@ -4,3 +4,13 @@
 
 const DEFAULT_SIZE = 16;
 const DEFAULT_COLOR = "#000000";
+const container = document.getElementById("container");
+let currentSize = DEFAULT_SIZE;
+
+for (let i = 0; i < currentSize * currentSize; i++){
+  const gridDiv = document.createElement("div");
+  gridDiv.textContent = "*";
+  gridDiv.classList.add("grid-item");
+  container.appendChild(gridDiv);
+
+}
