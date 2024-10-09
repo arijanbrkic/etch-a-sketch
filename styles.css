@@ -7,8 +7,9 @@ body {
 }
 .grid-item {
     box-sizing: border-box;
-    width: calc(25% - 1px); /* Adjust the width of each div */
+    width: calc(25% - 1px); 
     height: 0;
-    padding-bottom: calc(25% - 1px); /* Maintain a square aspect ratio */
-    border: 1px solid #000; /* Adjust the border color and thickness */
+    padding-bottom: calc(25% - 1px); 
+    border: 1px solid #000; 
+    background-color: aqua;
 }
