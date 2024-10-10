@@ -22,6 +22,7 @@ function createGrid(size) {
     const gridDiv = document.createElement("div");
     gridDiv.classList.add("grid-item");
     container.appendChild(gridDiv);
+    gridDiv.addEventListener('mousedown', changeMode);
     gridDiv.addEventListener('mouseover', changeMode);
 
   }
