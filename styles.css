@@ -1,9 +1,10 @@
 #container {
     display: grid;
+    height: 50%;
+    width: 50%;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
-    height: 50%%;
-    width: 50%;
+    
 }
 .grid-item {
     border: 1px solid #000000;
