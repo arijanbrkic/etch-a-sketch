@@ -54,9 +54,12 @@ const getRgbValue = () => {
 function changeMode(e) {
   if (currentMode === 'color') {
     e.target.style.backgroundColor = currentColor;
+    e.target.style.opacity = 1;
   } else if (currentMode === 'shade') {
     //NEEDS WORK, not quite there yet
-    const newColor = e.target.style.opacity = "0.9";
+    if (!e.target.style.opacity) e.target.style.opacity = '1';
+    opacity = parseFloat(e.target.style.opacity);
+    e.target.style.opacity = opacity - 0.1;
   } else if (currentMode === 'eraser') {
     e.target.style.backgroundColor = "#FFFFFF";
   } else if (currentMode === 'rainbow') {
@@ -65,6 +68,7 @@ function changeMode(e) {
     const randomG = getRgbValue();
     const randomB = getRgbValue();
     e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
+    e.target.style.opacity = 1;
   }
 }
 

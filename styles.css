@@ -8,15 +8,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;;
+    margin: 0 auto;
 }
 body {
     height: 100vh;
     max-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: #feabfe !important;
 }
 #container {
@@ -30,6 +26,12 @@ body {
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
     
+}
+#colorPicker {
+    width: 50px;
+}
+#slider {
+    width: 200px;
 }
 #controls {
     display: flex;
