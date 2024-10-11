@@ -29,8 +29,16 @@ body {
     margin: 5px;
   }
 #controls * {
-    padding: 3px;
-    margin: 3px;
+    margin: 0.5vh;
+    padding: 0.3vh;
+    height: 7vh;
+}
+.colorPickerDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+    
 }
 .grid-item {
     border: 1px solid #ccc;

@@ -39,6 +39,14 @@ slider.addEventListener('change', function() {
   
 });
 
+//create function to get a random color for rainbow mode
+const getRgbValue = () => {
+  const min = 0;
+  const max = 255; 
+  return Math.ceil(Math.random() * (max - min)) + min
+}
+
+
 //we need a function to alternate between the color modes and add event listeners to each button.
 
 function changeMode(e) {
@@ -46,6 +54,12 @@ function changeMode(e) {
     e.target.style.backgroundColor = currentColor;
   } else if (currentMode === 'eraser') {
     e.target.style.backgroundColor = "#FFFFFF";
+  } else if (currentMode === 'rainbow') {
+    //generate a random RGB value for rainbow blocks
+    const randomR = getRgbValue();
+    const randomG = getRgbValue();
+    const randomB = getRgbValue();
+    e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
   }
 }
 
@@ -58,4 +72,7 @@ colorPicker.addEventListener('input', function() {
 
 eraserBtn.addEventListener('click', function() {
   currentMode = 'eraser';
+});
+rainbowBtn.addEventListener('click', function(){
+  currentMode = 'rainbow';
 });

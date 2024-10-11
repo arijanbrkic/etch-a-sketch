@@ -12,12 +12,15 @@
   <div id="container" class="sketchCanvas"></div> 
 
   <div id="controls">
-  <input type="color" id="colorPicker" value="#000000"/>
-  <button id="rainbowBtn" class="settingButton">Rainbow Mode</button>
-  <button id="shadeBtn" class="settingButton">Shade Mode</button>
-  <button id ="eraserBtn" class="settingButton">Eraser</button>
-  <button id ="clearBtn" class="settingButton">Clear All</button>
-  <input type="range" id="slider" value="16" min="4" max="64" />
+    <div class="colorPickerDiv">
+      <input type="color" id="colorPicker" value="#000000"/>
+      <label for="colorPicker">Pick a color!</label>
+    </div>
+      <button id="rainbowBtn" class="settingButton">Rainbow Mode</button>
+    <button id="shadeBtn" class="settingButton">Shade Mode</button>
+    <button id ="eraserBtn" class="settingButton">Eraser</button>
+    <button id ="clearBtn" class="settingButton">Clear All</button>
+    <input type="range" id="slider" value="16" min="4" max="64" />
   </div>
 
   <script src="script.js"></script>
