@@ -7,7 +7,9 @@ const colorPicker = document.getElementById("colorPicker");
 const rainbowBtn = document.getElementById("rainbowBtn");
 const eraserBtn = document.getElementById("eraserBtn");
 const shadeBtn = document.getElementById("shadeBtn");
+const clearBtn = document.getElementById("clearBtn");
 
+//default mode and color
 let currentMode = 'color';
 let currentColor = '#000000';
 
@@ -52,6 +54,9 @@ const getRgbValue = () => {
 function changeMode(e) {
   if (currentMode === 'color') {
     e.target.style.backgroundColor = currentColor;
+  } else if (currentMode === 'shade') {
+    //NEEDS WORK, not quite there yet
+    const newColor = e.target.style.opacity = "0.9";
   } else if (currentMode === 'eraser') {
     e.target.style.backgroundColor = "#FFFFFF";
   } else if (currentMode === 'rainbow') {
@@ -73,6 +78,18 @@ colorPicker.addEventListener('input', function() {
 eraserBtn.addEventListener('click', function() {
   currentMode = 'eraser';
 });
+
 rainbowBtn.addEventListener('click', function(){
   currentMode = 'rainbow';
+});
+
+clearBtn.addEventListener('click', function() {
+  const allGridDivs = container.querySelectorAll('.grid-item');
+  allGridDivs.forEach(div => {
+    div.style.backgroundColor = "#FFFFFF" ;
+  });
+});
+
+shadeBtn.addEventListener('click', function(){
+  currentMode = 'shade';
 });
