@@ -5,23 +5,30 @@
 }
 .content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
 }
+.colorContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
 body {
     height: 100vh;
     max-height: 100vh;
-    background-color: #F4EDED !important;
-    font-family: "Ubuntu", sans-serif !important;
+    background-color: #F4EDED;
+    font-family: "Ubuntu", sans-serif;
 }
 #container {
-    margin: 0 auto;
+    margin: 20px;
     display: grid;
     background-color: #FFFFFF;
-    width: 70vmin;
-    max-width: 70vmin;
+    width: 60vmin;
+    max-width: 60vmin;
     border: 3px solid #161413;
     border-radius: 1.3%;
     grid-template-columns: repeat(16, 1fr);
@@ -29,12 +36,14 @@ body {
     
 }
 .btn {
-    background-color: #161413 !important;
+    background-color: #161413;
     transform: scale(1);
     transition: all 0.5s ease-in-out;
 }
 .btn:hover{
     transform: scale(1.05);
+    background-color: #F4EDED;
+    color: #161413;
     transition: all 0.5s ease-in-out;
 }
 #colorPicker {
@@ -46,23 +55,29 @@ body {
 #controls {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    margin: 5px;
+    flex-direction: column;
+    margin: 0px;
   }
 #controls * {
-    margin: 0.5vh;
-    padding: 0.3vh;
+    margin: 0.4vh;
+    padding: 0.1vh;
     height: 7vh;
+    font-size: 3vh;
 }
 
 .grid-item {
-    border: 1px solid #ccc;
     aspect-ratio: 1 / 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.form-control-range {
+    accent-color: #161413;
+}
 h1 {
-    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 9vmin;
     color: #161413;
 }

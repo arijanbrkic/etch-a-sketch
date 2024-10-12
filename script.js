@@ -8,6 +8,7 @@ const rainbowBtn = document.getElementById("rainbowBtn");
 const eraserBtn = document.getElementById("eraserBtn");
 const shadeBtn = document.getElementById("shadeBtn");
 const clearBtn = document.getElementById("clearBtn");
+const colorLabel = document.getElementById("colorLabel");
 
 //default mode and color
 let currentMode = 'color';
@@ -55,6 +56,7 @@ function changeMode(e) {
   if (currentMode === 'color') {
     e.target.style.backgroundColor = currentColor;
     e.target.style.opacity = 1;
+    colorLabel.style.color = currentColor;
   } else if (currentMode === 'shade') {
     //NEEDS WORK, not quite there yet
     if (!e.target.style.opacity) e.target.style.opacity = '1';
