@@ -27,6 +27,9 @@ function createGrid(size) {
     container.appendChild(gridDiv);
     gridDiv.addEventListener('mousedown', changeMode);
     gridDiv.addEventListener('mouseover', changeMode);
+    gridDiv.addEventListener('touchstart', changeMode);
+    gridDiv.addEventListener('touchmove', changeMode);
+
 
   }
 

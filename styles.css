@@ -81,3 +81,37 @@ h1 {
     font-size: 9vmin;
     color: #161413;
 }
+@media (max-width: 768px) {
+    h1 {
+        font-size: 7vmin;
+    }
+
+    #container {
+        width: 80vmin;
+        max-width: 80vmin;
+    }
+
+    #controls * {
+        font-size: 2.5vh; 
+        height: 6vh;      
+    }
+
+    .content {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 480px) {
+    #container {
+        width: 90vmin; 
+    }
+
+    #controls * {
+        font-size: 2vh;
+        height: 5vh;
+    }
+
+    .content {
+        flex-direction: column-reverse;
+    }
+}
