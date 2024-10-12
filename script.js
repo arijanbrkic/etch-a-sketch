@@ -9,7 +9,7 @@ const eraserBtn = document.getElementById("eraserBtn");
 const shadeBtn = document.getElementById("shadeBtn");
 const clearBtn = document.getElementById("clearBtn");
 const colorLabel = document.getElementById("colorLabel");
-
+const sliderText = document.getElementById("sliderText");
 //default mode and color
 let currentMode = 'color';
 let currentColor = '#000000';
@@ -27,9 +27,7 @@ function createGrid(size) {
     container.appendChild(gridDiv);
     gridDiv.addEventListener('mousedown', changeMode);
     gridDiv.addEventListener('mouseover', changeMode);
-    gridDiv.addEventListener('touchstart', changeMode);
-    gridDiv.addEventListener('touchmove', changeMode);
-
+    sliderText.textContent = `${size} x ${size}`;
 
   }
 
@@ -61,10 +59,9 @@ function changeMode(e) {
     e.target.style.opacity = 1;
     colorLabel.style.color = currentColor;
   } else if (currentMode === 'shade') {
-    //NEEDS WORK, not quite there yet
     if (!e.target.style.opacity) e.target.style.opacity = '1';
     opacity = parseFloat(e.target.style.opacity);
-    e.target.style.opacity = opacity - 0.1;
+    e.target.style.opacity = opacity - 0.1, 1;
   } else if (currentMode === 'eraser') {
     e.target.style.backgroundColor = "#FFFFFF";
   } else if (currentMode === 'rainbow') {
